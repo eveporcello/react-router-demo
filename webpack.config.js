@@ -2,7 +2,7 @@ module.exports = {
     entry: "./index.js",
     output: {
         path: "dist/assets",
-        filename: "bundle.js",
+        filename: "bundle.min.js",
         publicPath: "/assets/"
     },
     devServer: {

@@ -1,0 +1,21 @@
+html, body {
+    min-height: 100%;
+    height: auto;
+    font-family: Monaco;
+}
+
+div.react-container {
+    position: relative;
+}
+
+a {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+}
+
+.active {
+    background: salmon;
+    color: #000;
+}
+
