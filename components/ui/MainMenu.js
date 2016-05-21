@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router'
+import { Link } from 'react-router'
 import FaHome from 'react-icons/lib/fa/home'
 
 const MainMenu = () => {
