@@ -1,7 +1,7 @@
 html, body {
     min-height: 100%;
     height: auto;
-    font-family: Monaco;
+    font-family: "Architects Daughter", sans-serif;
 }
 
 div.react-container {
@@ -9,13 +9,11 @@ div.react-container {
 }
 
 a {
-    padding: 10px 15px;
-    background: #4479BA;
-    color: #FFF;
+    color: navy;
+    font-family: 'Lato', arial;
 }
 
 .active {
-    background: salmon;
-    color: #000;
+    color: salmon;
 }
 

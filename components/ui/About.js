@@ -2,11 +2,11 @@ import React from 'react'
 import Breadcrumbs from './Breadcrumbs'
 import AboutMenu from './AboutMenu'
 
-const About = ({routes, children}) => (
+const About = ({routes, children, location}) => (
    <div>
       <Breadcrumbs routes={routes}/>
         <h1>About</h1>
-       <AboutMenu routes={routes}/>
+       <AboutMenu location={location}/>
        {children}
    </div>
 );
