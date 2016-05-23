@@ -3,4 +3,7 @@ node_modules/
 dist/assets/
 coverage/
 npm-debug.log
-.idea/vcs.xml
+.idea/
+
+
+

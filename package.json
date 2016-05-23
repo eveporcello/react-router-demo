@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "webpack",
-    "dev": "./node_modules/.bin/webpack-dev-server"
+    "start": "httpster -p 3000 -d ./dist"
   },
   "author": "Eve Porcello <eve@moonhighway.com> (http://www.moonhighway.com)",
   "license": "MIT",
