@@ -3,37 +3,49 @@ import MemberInfo from './MemberInfo'
 import MemberFilters from './MemberFilters'
 import Breadcrumbs from './Breadcrumbs'
 import { saveTo, getFakeMembers, compose } from '../../lib'
-
-// TODO: Load Members (component will mount)
-// TODO: Pass members down to memberlist
-
-const membersReady = setState => members => setState({members, loadingMembers: false});
+import { hashHistory } from 'react-router'
 
 class Members extends React.Component {
-    constructor() {
-        super();
+
+    constructor(props) {
+        super(props);
         this.state = {
-            members: [],
-            loadingMembers: true
+            members: (sessionStorage.members) ? JSON.parse(sessionStorage.members) : [],
+            loadingMembers: (sessionStorage.members) ? false : true
         };
     }
 
     componentDidMount() {
-        getFakeMembers(20).then(
-            members => {
-               this.setState({members: members, loadingMembers: false})
-            },
-            error => console.error(error)
-        );
+        if (!sessionStorage.members) {
+            getFakeMembers(100).then(
+                compose(
+                    saveTo(sessionStorage, "members"),
+                    members => this.setState({members, loadingMembers: false})
+                ),
+                error => console.error(error)
+            );
+        }
     }
 
-
     render() {
+        const {routes, params} = this.props;
+        const {members, loadingMembers} = this.state;
+        const genderRoute = params.gender || "any";
+        const stateRoute = params.state || "any";
         return <div>
-            <Breadcrumbs routes={this.props.routes}/>
+            <Breadcrumbs routes={routes}/>
             <h1>Members</h1>
-            <MemberFilters />
-            {(this.state.loadingMembers) ? <span>Members Loading</span> : <MemberInfo members={this.state.members} />}
+            <MemberFilters state={params.state}
+                           gender={params.gender}
+                           onGenderChange={(gender) => hashHistory.push(`/members/${gender}/${stateRoute}`)}
+                           onStateChange={(state) => hashHistory.push(`/members/${genderRoute}/${state}`)}/>
+            {(loadingMembers) ?
+                <span>Members Loading</span> :
+                <MemberInfo state={params.state}
+                            gender={params.gender}
+                            members={members}
+
+                />}
         </div>
     }
 }
