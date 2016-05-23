@@ -13,6 +13,8 @@ import Location from './components/ui/Location'
 import Services from './components/ui/Services'
 import Company from './components/ui/Company'
 
+window.React = React;
+
 const routes = (
     <Router history={hashHistory}>
         <Route path="/" component={App}>

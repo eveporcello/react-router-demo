@@ -1,3 +1,4 @@
+import Member from './Member'
 import { PropTypes } from 'react'
 import {compose, filterByGender, filterByState} from '../../lib'
 

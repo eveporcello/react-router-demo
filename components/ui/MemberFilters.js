@@ -1,13 +1,13 @@
 import React from 'react'
+import GenderButtons from './GenderButtons'
+import StateList from './StateList'
 
-const MemberFilters = () => {
-    return (
-        <nav id="sublinks">
-            <Link to="/members/all">All Members</Link>
-            <Link to="/members/female">All Women</Link>
-            <Link to="/members/male/virginia">All Men From Virginia</Link>
-        </nav>
-    )
-};
+const MemberFilters = ({gender="any", state="any", onGenderChange=f=>f, onStateChange=f=>f}) => (
+    <div className="member-filters">
+        <h1>Member Filters</h1>
+        <GenderButtons selected={gender} onChange={(gender) => onGenderChange(gender)} />
+        <StateList selected={state} onChange={(state) => onStateChange(state)} />
+    </div>
+);
 
 module.exports = MemberFilters;
