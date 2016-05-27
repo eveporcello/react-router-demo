@@ -1,6 +1,5 @@
 import React from 'react'
 import { hashHistory } from 'react-router'
-import FaHome from 'react-icons/lib/fa/home'
 
 const Home = () => (
     <section className="home-page-menu">

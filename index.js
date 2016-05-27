@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './components/App'
 import Home from './components/ui/Home'
 import About from './components/ui/About'
@@ -36,3 +36,4 @@ const routes = (
 );
 
 render(routes, document.getElementById('react-container'));
+

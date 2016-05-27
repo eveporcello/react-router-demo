@@ -8,6 +8,6 @@ const MemberFilters = ({gender="any", state="any", onGenderChange=f=>f, onStateC
         <GenderButtons selected={gender} onChange={(gender) => onGenderChange(gender)} />
         <StateList selected={state} onChange={(state) => onStateChange(state)} />
     </div>
-);
+)
 
 module.exports = MemberFilters;

@@ -1,5 +1,4 @@
 import React from 'react'
-
 const GenderButtons = ({selected="any", onChange=f=>f}) => (
     <div className="gender-filters">
         <span className={(selected.toLowerCase()==="any") ? "selected" : ""} onClick={() => onChange("any")}>Any</span>
