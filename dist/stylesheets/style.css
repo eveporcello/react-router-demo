@@ -1,19 +1,100 @@
 html, body {
-    min-height: 100%;
-    height: auto;
     font-family: "Architects Daughter", sans-serif;
 }
 
-div.react-container {
+.app {
     position: relative;
+    display: flex;
 }
 
-a {
-    color: navy;
-    font-family: 'Lato', arial;
+#homepage {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.active {
-    color: salmon;
+.home-page-menu {
+    display: flex;
+    flex-direction: row;
+    background-color: slategray;
+    color: white;
+}
+
+.home-page-menu>section {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.home-page-menu h1, h2 {
+    text-align: center;
+}
+
+#homebox {
+    min-height: 500px;
+    display: flex;
+    min-width: 100%;
+    border: 1px darkslategray dashed;
+}
+
+aside {
+    min-height: 90%;
+    background-color: #00d4b4;
+    border: 2px solid black;
+}
+
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: slategray;
+    color: white;
+    width: 20%;
+    height: 40%;
+    line-height: 4em;
+}
+
+.main-menu a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-menu a:not(:first-child) {
+    border-top: 3px dashed white;
+}
+
+.breadcrumbs-list {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+ul>li {
+    padding-right: 2em;
+}
+
+nav ~ div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+    padding-left: 1em;
+}
+
+.about-menu {
+    list-style-type: none;
+    display: inline-flex;
+    background-color: slategray;
+    line-height: 2em;
+}
+
+.about-menu>li>a {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
 }
 

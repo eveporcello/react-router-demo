@@ -4,11 +4,11 @@ import FaHome from 'react-icons/lib/fa/home'
 
 const MainMenu = () => {
     return (
-        <nav>
+        <nav className="main-menu">
             <Link to="/"><FaHome/></Link>
-            <Link to="about" activeClassName="active">About</Link>
-            <Link to="events" activeClassName="active">Events</Link>
-            <Link to="members" activeClassName="active">Members</Link>
+            <Link to="about" activeStyle={{backgroundColor: '#708090', color: '#FFFFFF'}}>About</Link>
+            <Link to="events" activeStyle={{backgroundColor: '#708090', color: '#FFFFF'}}>Events</Link>
+            <Link to="members" activeStyle={{backgroundColor: '#708090', color: 'white'}}>Members</Link>
         </nav>
     )
 };

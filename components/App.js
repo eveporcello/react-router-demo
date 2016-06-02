@@ -1,5 +1,5 @@
 import React from 'react'
-import MainMenu from './ui/MainMenu'
+import {MainMenu} from './ui'
 
 const App = ({location, children}) => (
     <div className="app">

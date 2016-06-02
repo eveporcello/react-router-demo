@@ -2,16 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './components/App'
-import Home from './components/ui/Home'
-import About from './components/ui/About'
-import Events from './components/ui/Events'
-import Members from './components/ui/Members'
-import MemberList from './components/ui/MemberList'
-import Whoops404 from './components/ui/Whoops404'
-import History from './components/ui/History'
-import Location from './components/ui/Location'
-import Services from './components/ui/Services'
-import Company from './components/ui/Company'
+import {Home, About, Events, Members, Whoops404, History, Location, Services, Company} from './components/ui'
 
 window.React = React;
 
@@ -27,8 +18,8 @@ const routes = (
             </Route>
             <Route path="events" component={Events}></Route>
             <Route path="members" component={Members}>
-                <Route path=":gender" component={MemberList}/>
-                <Route path=":gender/:state" component={MemberList}/>
+                <Route path=":gender"/>
+                <Route path=":gender/:state"/>
             </Route>
             <Route path="*" component={Whoops404}></Route>
         </Route>
@@ -36,4 +27,5 @@ const routes = (
 );
 
 render(routes, document.getElementById('react-container'));
+
 
