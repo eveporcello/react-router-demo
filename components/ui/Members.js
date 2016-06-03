@@ -34,7 +34,6 @@ class Members extends React.Component {
         const stateRoute = params.state || "any";
         return <div>
             <Breadcrumbs routes={routes}/>
-            <h1>Members</h1>
             <MemberFilters state={params.state}
                            gender={params.gender}
                            onGenderChange={(gender) => hashHistory.push(`/members/${gender}/${stateRoute}`)}
